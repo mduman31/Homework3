@@ -1,10 +1,10 @@
-# Homework3
+
 # Homework 3: Responsive Grid Layout Website
 
 ## Student Information
 * **Name:** MaryAnn Duman
 * **Course:** Introduction to Information Technology
-* **Project Date:** October 2026
+* **Project Date:** November 2026
 
 ---
 
