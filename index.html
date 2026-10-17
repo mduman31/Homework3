@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is my website - MaryAnn Duman</title>
+    <!-- Working Font Awesome Link for Social Media Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Decoupled External Stylesheet Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Homework 1 Structure: Core Semantic Header Blocks Component -->
+        <header id="top">
+            <p class="intro-text">This is my website</p>
+            <h1>Hello World</h1>
+            <p class="intro-text">My name is MaryAnn Duman</p>
+            <p class="bio-text">I love to learn a lot of new ways about Introduction to Information Technology.</p>
+        </header>
 
+        <h2>Welcome to my website</h2>
+
+        <!-- Homework 3 Grid System holding styled Homework 2 Cards -->
+        <div class="cards-grid">
+            <!-- Family Card -->
+            <div class="card">
+                <h3><i class="fa-solid fa-users"></i> My Family</h3>
+                <p>I am a mom to my own 6 kids: 4 girls (ages 14, 11, 8, and 5) and 2 boys (ages 6 and 2).</p>
+                <p>I am also a fiancée and a stepmom to his 2 sons!</p>
+            </div>
+
+            <!-- Gaming & Hobbies Card -->
+            <div class="card has-badge">
+                <h3><i class="fa-solid fa-gamepad"></i> Gaming & Hobbies</h3>
+                <p>In my spare time, I love playing Fortnite on my PS5!</p>
+                <a href="https://fortnite.com" target="_blank" class="badge">Fortnite Squad</a>
+            </div>
+
+            <!-- Career Goals Card -->
+            <div class="card">
+                <h3><i class="fa-solid fa-code"></i> Career Goals</h3>
+                <p>My dream job is <strong>Network Systems Administration & Engineering</strong>.</p>
+            </div>
+
+            <!-- Live Weather Card -->
+            <div class="card weather-card">
+                <h3><i class="fa-solid fa-cloud-sun"></i> New Castle, DE Live Weather</h3>
+                <div class="weather-widget-container">
+                    <!-- Repaired and validated Live Weather Widget Embedding -->
+                    <a class="weatherwidget-io" href="https://forecast7.com" data-label_1="NEW CASTLE" data-label_2="WEATHER" data-theme="original" data-basecolor="#8B1E26" data-accent="rgba(212, 175, 55, 0.35)" data-textcolor="#F7E7C4" >NEW CASTLE WEATHER</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s);if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p>&copy; 2026 MaryAnn Duman. All Rights Reserved.</p>
+            <a href="#top" class="top-link"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+        </footer>
+    </div>
+</body>
+</html>
