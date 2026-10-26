@@ -1,207 +1,175 @@
 /* ==========================================================================
-   1. Base Resets & Global Styles (Fluid Baseline)
+   1. STYLING: Design System, Spacing System (Multiples of 8px), Color Palette
    ========================================================================== */
+:root {
+  /* Color Palette Configured from README Specifications */
+  --maroon-accent: #8b1e26;       /* Base Crimson Maroon Accent Scheme */
+  --cream-gold: #f7e7c4;          /* Highlight Cream/Gold Scheme Tint */
+  --gold-alpha: rgba(212, 175, 55, 0.2);
+  --bg-tint: #faf8f5;             /* Light bone backdrop avoiding harsh white layers */
+  --text-charcoal: #2c3e50;       /* Mild charcoal text layer maximizing readability */
+  --card-white: #ffffff;
+  
+  /* Strict Spacing System tokens built on multiples of 8px */
+  --space-8: 8px;                 /* 8px x 1 */
+  --space-16: 16px;               /* 8px x 2 */
+  --space-24: 24px;               /* 8px x 3 */
+  --space-32: 32px;               /* 8px x 4 */
+  --space-64: 64px;               /* 8px x 8 */
+}
+
+/* Global Reset Optimization */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 10px; /* Small padding on mobile avoids edge-clipping */
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-tint);
+  color: var(--text-charcoal);
+  line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
+/* TYPE SELECTORS */
+h1, h2, h3 {
+  font-family: 'Fredoka', cursive;
+  margin-bottom: var(--space-16);
 }
 
-/* ==========================================================================
-   2. Header Component (Homework 1 - Contextual Background)
-   ========================================================================== */
-header {
-    background-color: #8B1E26;
-    color: #F7E7C4;
-    padding: 30px 15px;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+h1 { 
+  font-size: 2.2rem;
 }
 
-header h1 {
-    font-size: 2rem; /* Scaled down for mobile baseline */
-    margin: 8px 0;
-    letter-spacing: 1px;
+h2 { 
+  font-size: 1.8rem; 
+  color: var(--maroon-accent);
+  border-bottom: 3px solid var(--cream-gold); /* Crimson section underline header accent */
+  padding-bottom: var(--space-8);
+  margin-bottom: var(--space-24);
 }
 
-.intro-text {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    opacity: 0.9;
+h3 {
+  font-size: 1.3rem;
+  color: var(--maroon-accent);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8); /* Visual alignment space for icons */
 }
 
-.bio-text {
-    margin-top: 12px;
-    font-style: italic;
-    font-size: 1rem;
+p {
+  margin-bottom: var(--space-16);
 }
 
-h2 {
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+/* CLASS SELECTORS & RE-DESIGN LAYOUTS */
+.header-bar {
+  background-color: var(--maroon-accent);
+  color: white;
+  text-align: center;
+  padding: var(--space-64) var(--space-16);
+  border-bottom: 5px solid var(--cream-gold); /* Gold Accent header rule split line */
 }
 
-/* ==========================================================================
-   3. Modern Layout Tools: CSS Grid (Homework 3 Layout)
-   ========================================================================== */
-.cards-grid {
-    display: grid;
-    /* auto-fit automatically handles columns dynamically without rigid media queries */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
+.header-bar h1 {
+  color: var(--cream-gold);
 }
 
-/* ==========================================================================
-   4. Component Architecture: Flexbox Cards (Homework 2 Styling)
-   ========================================================================== */
-.card {
-    background: #ffffff;
-    border-left: 5px solid #8B1E26;
-    border-radius: 6px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-    /* Flexbox isolates card content behavior in 1D space */
-    display: flex;
-    flex-direction: column;
+.header-bar p {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  color: white;
+  opacity: 0.9;
 }
 
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-32) var(--space-16);
 }
 
-.card h3 {
-    color: #8B1E26;
-    margin-bottom: 12px;
-    font-size: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* ==========================================================
+   2. LAYOUT: Advanced CSS Grid Layout Component
+   ========================================================== */
+.profile-grid {
+  display: grid;
+  /* Homework 3 Auto-fit responsive column specification blueprint */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-24); /* Standard 24px box layout alignment separations */
+  margin-top: var(--space-24);
 }
 
-.card p {
-    color: #555;
-    margin-bottom: 12px;
-    font-size: 0.95rem;
+.profile-card {
+  background-color: var(--card-white);
+  padding: var(--space-24); /* Interior cushion boundary tracking 24px tokens */
+  border-radius: var(--space-16);
+  box-shadow: 0 4px 15px rgba(139, 30, 38, 0.04); /* Soft maroon blended container depth */
+  border-top: 4px solid var(--maroon-accent); /* Top structural framing band */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps card lengths even across row wraps */
 }
 
-/* Specific Card Layout Refinements */
-.card.has-badge p {
-    margin-bottom: 20px;
+.cta-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--maroon-accent);
+  color: var(--cream-gold);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--space-8);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: var(--space-8);
+  transition: all 0.2s ease;
 }
 
-.badge {
-    display: inline-block;
-    background-color: #8B1E26;
-    color: #F7E7C4;
-    padding: 6px 14px;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.85rem;
-    text-align: center;
-    align-self: flex-start; /* Keeps the interactive badge left-aligned */
-    margin-top: auto;       /* Pushes the button to the bottom if content varies */
-    transition: background 0.2s;
+.cta-badge:hover {
+  background-color: var(--text-charcoal);
+  color: white;
 }
 
-.badge:hover {
-    background-color: #a3232d;
+.skip-wrapper {
+  text-align: center;
+  margin-top: var(--space-64);
 }
 
-.weather-widget-container {
-    width: 100%;
-    margin-top: auto; /* Forces weather content layout down */
-    border-radius: 4px;
-    overflow: hidden;
+.back-to-top-btn {
+  display: inline-block;
+  color: var(--maroon-accent);
+  background-color: var(--cream-gold);
+  padding: var(--space-8) var(--space-24);
+  border-radius: var(--space-32);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+  border: 1px solid var(--gold-alpha);
 }
 
-/* ==========================================================================
-   5. Footer Structure
-   ========================================================================== */
+.back-to-top-btn:hover {
+  background-color: var(--maroon-accent);
+  color: white;
+}
+
 footer {
-    text-align: center;
-    padding: 25px 10px;
-    margin-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #777;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: var(--space-32);
+  background-color: var(--maroon-accent);
+  color: var(--cream-gold);
+  margin-top: var(--space-64);
+  border-top: 4px solid var(--cream-gold);
 }
 
-.social-links {
-    margin-bottom: 15px;
-}
-
-.social-icon {
-    color: #8B1E26;
-    font-size: 1.4rem;
-    margin: 0 12px;
-    transition: color 0.2s;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #2c3e50;
-}
-
-.top-link {
-    display: inline-block;
-    margin-top: 12px;
-    color: #8B1E26;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
-
-/* ==========================================================================
-   6. Adaptive System Control (Media Queries)
-   ========================================================================== */
-
-/* Tablet & Mid-Size Displays (600px and up) */
-@media screen and (min-width: 600px) {
-    body {
-        padding: 20px;
-    }
-    .container {
-        padding: 20px;
-    }
-    header {
-        padding: 40px 20px;
-    }
-    header h1 {
-        font-size: 2.6rem;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
-/* Desktop & Large Screen Optimizations (992px and up) */
-@media screen and (min-width: 992px) {
-    /* Transforms the layout of specific columns to show spatial mastery */
-    .weather-card {
-        grid-column: span 2; /* Weather card spans across two tracks on large displays */
-    }
+/* ==========================================================
+   3. RESPONSIVENESS: Responsive Viewport Protection
+   ========================================================== */
+@media (max-width: 320px) {
+  /* Enforces neat micro-spacing controls on extreme 320px small screens */
+  .main-container {
+    padding: var(--space-16) var(--space-8);
+  }
+  .profile-card {
+    padding: var(--space-16);
+  }
 }
