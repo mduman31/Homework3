@@ -1,70 +1,83 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is my website - MaryAnn Duman</title>
-    <!-- Working Font Awesome Link for Social Media Icons -->
+    <title>Homework 3: Responsive Grid Layout Website</title>
+    <!-- Font Awesome Icon Integration v6.4 -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <!-- Decoupled External Stylesheet Link -->
+    <!-- Google Fonts Integration: Fredoka & Quicksand -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Decoupled Style Link Deliverable -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Homework 1 Structure: Core Semantic Header Blocks Component -->
-        <header id="top">
-            <p class="intro-text">This is my website</p>
-            <h1>Hello World</h1>
-            <p class="intro-text">My name is MaryAnn Duman</p>
-            <p class="bio-text">I love to learn a lot of new ways about Introduction to Information Technology.</p>
-        </header>
 
-        <h2>Welcome to my website</h2>
+    <!-- Anchor ID for Back to Top mechanism -->
+    <div id="top"></div>
 
-        <!-- Homework 3 Grid System holding styled Homework 2 Cards -->
-        <div class="cards-grid">
-            <!-- Family Card -->
-            <div class="card">
-                <h3><i class="fa-solid fa-users"></i> My Family</h3>
-                <p>I am a mom to my own 6 kids: 4 girls (ages 14, 11, 8, and 5) and 2 boys (ages 6 and 2).</p>
-                <p>I am also a fiancée and a stepmom to his 2 sons!</p>
-            </div>
+    <header class="header-bar">
+        <h1>🌺 Responsive Profile Showcase</h1>
+        <p>MaryAnn Duman | Introduction to Information Technology</p>
+    </header>
 
-            <!-- Gaming & Hobbies Card -->
-            <div class="card has-badge">
-                <h3><i class="fa-solid fa-gamepad"></i> Gaming & Hobbies</h3>
-                <p>In my spare time, I love playing Fortnite on my PS5!</p>
-                <a href="https://fortnite.com" target="_blank" class="badge">Fortnite Squad</a>
-            </div>
+    <main class="main-container">
+        <h2>Student Profile Dashboard</h2>
 
-            <!-- Career Goals Card -->
-            <div class="card">
-                <h3><i class="fa-solid fa-code"></i> Career Goals</h3>
-                <p>My dream job is <strong>Network Systems Administration & Engineering</strong>.</p>
-            </div>
+        <!-- Homework 3: Responsive CSS Grid Layout System -->
+        <section class="profile-grid">
+            
+            <!-- Card 1: About Me -->
+            <article class="profile-card">
+                <div>
+                    <h3><i class="fa-solid fa-user-graduate"></i> About Me</h3>
+                    <p><strong>Student Name:</strong> MaryAnn Duman</p>
+                    <p>Enrolled and actively studying foundational computing protocols, spreadsheet tracking arrays, and web structures within Introduction to Information Technology.</p>
+                </div>
+            </article>
 
-            <!-- Live Weather Card -->
-            <div class="card weather-card">
-                <h3><i class="fa-solid fa-cloud-sun"></i> New Castle, DE Live Weather</h3>
-                <div class="weather-widget-container">
-                    <!-- Repaired and validated Live Weather Widget Embedding -->
-                    <a class="weatherwidget-io" href="https://forecast7.com" data-label_1="NEW CASTLE" data-label_2="WEATHER" data-theme="original" data-basecolor="#8B1E26" data-accent="rgba(212, 175, 55, 0.35)" data-textcolor="#F7E7C4" >NEW CASTLE WEATHER</a>
+            <!-- Card 2: Family & Hobbies -->
+            <article class="profile-card">
+                <div>
+                    <h3><i class="fa-solid fa-gamepad"></i> Family & Hobbies</h3>
+                    <p>Proud mom of 6 beautiful children and stepmom to 2 boys. When stepping away from my coursework assignments, I am an active PS5 Fortnite player.</p>
+                </div>
+                <a href="https://fortnite.com" target="_blank" class="cta-badge">Join the Squad <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </article>
+
+            <!-- Card 3: Career Goals -->
+            <article class="profile-card">
+                <div>
+                    <h3><i class="fa-solid fa-network-wired"></i> Career Goals</h3>
+                    <p>Developing professional skill sets with the target of launching a specialized engineering career pathways inside Network Systems Administration & Engineering.</p>
+                </div>
+            </article>
+
+            <!-- Card 4: Weather Integration -->
+            <article class="profile-card weather-card">
+                <div>
+                    <h3><i class="fa-solid fa-cloud-sun"></i> Live New Castle, DE Weather</h3>
+                    <!-- Weatherwidget.io Integration Engine Loop -->
+                    <a class="weatherwidget-io" href="https://forecast.io Castle, DE&color=#8b1e26" data-label_1="NEW CASTLE, DE" data-label_2="WEATHER" data-theme="pure" data-basecolor="#8b1e26" data-accent="#f7e7c4">New Castle, DE Weather</a>
                     <script>
                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s);if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
                     </script>
                 </div>
-            </div>
-        </div>
+            </article>
 
-        <footer>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-            <p>&copy; 2026 MaryAnn Duman. All Rights Reserved.</p>
-            <a href="#top" class="top-link"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
-        </footer>
-    </div>
+        </section>
+
+        <!-- Back to Top Skip Mechanism Trigger -->
+        <div class="skip-wrapper">
+            <a href="#top" class="back-to-top-btn"><i class="fa-solid fa-chevron-up"></i> Back to Top</a>
+        </div>
+    </main>
+
+    <footer class="footer-bar">
+        <p>&copy; 2026 MaryAnn Duman. Built with 💙 for Homework 3 | All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
