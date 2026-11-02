@@ -9,7 +9,7 @@
     <!-- Google Fonts Pairings: Fredoka (Headings) & Quicksand (Body Text) -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     <!-- Decoupled External Style Sheet Link -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -32,7 +32,7 @@
             <!-- Component Card 1: About Me -->
             <article class="profile-card">
                 <div>
-                    <h3><i class="fa-solid fa-user-graduate"></i> About Me</h3>
+                    <h3><i class="fa-solid fa-user-graduate" aria-hidden="true"></i> About Me</h3>
                     <p><strong>Name:</strong> MaryAnn Duman</p>
                     <p>I am a student currently exploring foundational computing infrastructures, responsive style configurations, and semantic markup structures inside Information Technology workflows.</p>
                 </div>
@@ -41,16 +41,16 @@
             <!-- Component Card 2: Family & Leisure Hobbies -->
             <article class="profile-card">
                 <div>
-                    <h3><i class="fa-solid fa-gamepad"></i> Family & Hobbies</h3>
+                    <h3><i class="fa-solid fa-gamepad" aria-hidden="true"></i> Family & Hobbies</h3>
                     <p>Proud mom of 6 beautiful children and stepmom to 2 boys. When taking a break from my IT study tracks, I am an active PS5 Fortnite squad player.</p>
                 </div>
-                <a href="https://fortnite.com" target="_blank" class="cta-badge">Join the Squad <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://fortnite.com" target="_blank" class="cta-badge" aria-label="Join MaryAnn's Fortnite squad, opens in a new tab">Join the Squad <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
             </article>
 
             <!-- Component Card 3: Career Ambitions -->
             <article class="profile-card">
                 <div>
-                    <h3><i class="fa-solid fa-network-wired"></i> Career Goals</h3>
+                    <h3><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Career Goals</h3>
                     <p>Building foundational skills with the long-term career ambition of transitioning into modern professional Network Systems Administration & Engineering frameworks.</p>
                 </div>
             </article>
@@ -58,9 +58,9 @@
             <!-- Component Card 4: Weather Integration Widget -->
             <article class="profile-card weather-card">
                 <div>
-                    <h3><i class="fa-solid fa-cloud-sun"></i> Live New Castle, DE Weather</h3>
+                    <h3><i class="fa-solid fa-cloud-sun" aria-hidden="true"></i> Live New Castle, DE Weather</h3>
                     <!-- Active weatherwidget.io tracking script implementation -->
-                    <a class="weatherwidget-io" href="https://forecast.io Castle, DE&color=#8b1e26" data-label_1="NEW CASTLE, DE" data-label_2="WEATHER" data-theme="pure" data-basecolor="#8b1e26" data-accent="#f7e7c4">New Castle, DE Weather</a>
+                    <a class="weatherwidget-io" href="https://forecast.io Castle, DE&color=#8b1e26" data-label_1="NEW CASTLE, DE" data-label_2="WEATHER" data-theme="pure" data-basecolor="#8b1e26" data-accent="#f7e7c4" aria-label="Live New Castle, Delaware 7-day weather forecast layout widget">New Castle, DE Weather</a>
                     <script>
                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s);if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
                     </script>
@@ -71,7 +71,7 @@
 
         <!-- Homework 1 "Back to Top" skip restoration anchor trigger -->
         <div class="skip-wrapper">
-            <a href="#top" class="back-to-top-btn"><i class="fa-solid fa-chevron-up"></i> Back to Top</a>
+            <a href="#top" class="back-to-top-btn"><i class="fa-solid fa-chevron-up" aria-hidden="true"></i> Back to Top</a>
         </div>
     </main>
 
