@@ -15,22 +15,22 @@
   --space-16: 16px;               /* 8px x 2 */
   --space-24: 24px;               /* 8px x 3 */
   --space-32: 32px;               /* 8px x 4 */
+  --space-48: 48px;               /* 8px x 6 */
   --space-64: 64px;               /* 8px x 8 */
 }
 
-/* Before */
-body {
-  background-color: #071e43;
-  color: #a3c6d9;
+/* Global resets for edge padding configurations */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* After - Text updated to a higher-contrast light blue/cream to exceed 4.5:1 */
 body {
-  background-color: #071e43;
-  color: #d1e5f0; 
-}
-h1, h2, h3 {
-  color: #f7e8ff; /* Pastel contrast accent for clean heading visibility */
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg-tint);
+  color: var(--text-charcoal);
+  line-height: 1.6;
 }
 
 /* TYPE SELECTORS */
@@ -152,13 +152,24 @@ p {
   color: white;
 }
 
-footer {
+footer, .footer-bar {
   text-align: center;
   padding: var(--space-24) var(--space-16);
   background-color: var(--maroon-accent);
   color: var(--cream-gold);
   margin-top: var(--space-32);
   border-top: 4px solid var(--cream-gold);
+}
+
+/* ==========================================================
+   4. ACCESSIBILITY: High-Visibility Focus Outline Styling 
+   ========================================================== */
+.cta-badge:focus-visible, 
+.back-to-top-btn:focus-visible {
+  outline: 3px solid var(--maroon-accent);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px var(--cream-gold);
+  border-radius: var(--space-8);
 }
 
 /* ==========================================================
@@ -210,7 +221,7 @@ footer {
     margin-top: var(--space-64);
   }
 
-  footer {
+  footer, .footer-bar {
     padding: var(--space-32);
     margin-top: var(--space-64);
   }
