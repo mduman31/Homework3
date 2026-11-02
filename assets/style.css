@@ -18,18 +18,19 @@
   --space-64: 64px;               /* 8px x 8 */
 }
 
-/* Global resets for edge padding configurations */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Before */
+body {
+  background-color: #071e43;
+  color: #a3c6d9;
 }
 
+/* After - Text updated to a higher-contrast light blue/cream to exceed 4.5:1 */
 body {
-  font-family: 'Quicksand', sans-serif;
-  background-color: var(--bg-tint);
-  color: var(--text-charcoal);
-  line-height: 1.6;
+  background-color: #071e43;
+  color: #d1e5f0; 
+}
+h1, h2, h3 {
+  color: #f7e8ff; /* Pastel contrast accent for clean heading visibility */
 }
 
 /* TYPE SELECTORS */
